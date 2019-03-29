@@ -1,5 +1,10 @@
 # communication_between_components_in_vue
 
+### vue cli 配置选择项：
+Babel、Router(history mode)、Vuex、CSS Pre-processors(Less)、Linter / Formatter(Prettier, Lint and fix on commit)、In dedicated config files
+
+###
+
 ## Project setup
 ```
 npm install
