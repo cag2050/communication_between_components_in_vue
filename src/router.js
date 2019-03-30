@@ -45,6 +45,11 @@ export default new Router({
                 import("./views/child_to_parent/v-on_emit/Parent.vue")
         },
         {
+            path: "/child_to_parent/child_component_change_prop",
+            component: () =>
+                import("./views/child_to_parent/child_component_change_prop/Parent.vue")
+        },
+        {
             path: "/child_to_parent/sync_emit_update",
             component: () =>
                 import("./views/child_to_parent/sync_emit_update/Parent.vue")

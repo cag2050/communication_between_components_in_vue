@@ -39,6 +39,13 @@
                 >
             </li>
             <li>
+                <router-link to="/child_to_parent/child_component_change_prop"
+                    >子组件修改接收的基本类型 prop，会报错（如果一定要改，以
+                    update:myPropName
+                    的模式触发事件实现，即下面第3种方法）</router-link
+                >
+            </li>
+            <li>
                 <router-link to="/child_to_parent/sync_emit_update"
                     >子组件修改父组件传来的 prop，然后 emit 一个 update
                     事件，父组件监听该事件并更新自己的

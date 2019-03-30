@@ -7,14 +7,7 @@
                 <td>{{ prop_string }}</td>
                 <td>
                     <button @click="childChangeStringProp">
-                        子组件修改接收的字符串类型 prop
-                    </button>
-                </td>
-                <td>子组件接收的数组类型 prop 值：</td>
-                <td>{{ prop_array_required }}</td>
-                <td>
-                    <button @click="childChangeArrayTypeProp">
-                        子组件修改接收的数组类型 prop
+                        子组件修改接收的字符串类型 prop（不再报错）
                     </button>
                 </td>
             </tr>
@@ -28,26 +21,14 @@ export default {
     props: {
         prop_string: {
             type: String
-        },
-        prop_array_required: {
-            type: Array,
-            required: true
         }
     },
     data() {
         return {};
     },
-    // watch: {
-    //     prop_array_required () {
-    //
-    //     }
-    // },
     methods: {
-        childChangeArrayTypeProp() {
-            this.prop_array_required.shift();
-        },
         childChangeStringProp() {
-            this.prop_string = "子组件修改了";
+            this.$emit("update:prop_string", "子组件修改了");
         }
     }
 };

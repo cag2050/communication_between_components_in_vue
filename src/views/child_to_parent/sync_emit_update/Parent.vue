@@ -10,24 +10,10 @@
                 <td>父组件部分：</td>
                 <td>父组件传递的字符串类型 prop 值：</td>
                 <td>{{ string1 }}</td>
-                <td>
-                    <button @click="parentChangeStringProp">
-                        父组件修改传递的字符串类型 prop（正常的 prop
-                        单向数据流，子组件根据 prop 变化）
-                    </button>
-                </td>
-                <td>父组件传递的数组类型 prop 值：</td>
-                <td>{{ array1 }}</td>
-                <td>
-                    <button @click="parentChangeArrayTypeProp">
-                        父组件修改传递的数组类型 prop（正常的 prop
-                        单向数据流，子组件根据 prop 变化）
-                    </button>
-                </td>
             </tr>
         </table>
 
-        <child :prop_string="string1" :prop_array_required="array1"></child>
+        <child :prop_string.sync="string1"></child>
     </div>
 </template>
 
@@ -41,18 +27,10 @@ export default {
     },
     data() {
         return {
-            string1: "str from parent",
-            array1: [1, 2, 3]
+            string1: "str from parent"
         };
     },
-    methods: {
-        parentChangeStringProp() {
-            this.string1 = "父组件修改了";
-        },
-        parentChangeArrayTypeProp() {
-            this.array1.shift();
-        }
-    }
+    methods: {}
 };
 </script>
 
