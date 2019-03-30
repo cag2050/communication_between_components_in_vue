@@ -1,7 +1,7 @@
 <template>
     <div>
         <button @click="emitParentRegisterEvent">
-            子组件触发父组件注册的事件
+            点击：子组件触发父组件注册的事件
         </button>
     </div>
 </template>

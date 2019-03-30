@@ -9,24 +9,25 @@
         <ol>
             <li>
                 <router-link to="/parent_to_child/props"
-                    >父组件通过 Prop 向子组件传递数据（推荐使用）
-                </router-link>
-            </li>
-            <li>
-                <router-link to="/parent_to_child/refs"
-                    >父组件通过 ref 设置子组件的值（可以使用）
-                </router-link>
-            </li>
-            <li>
-                <router-link to="/parent_to_child/$children"
-                    >父组件通过 $children 设置子组件的值（$children
-                    并不保证顺序，开发者不应该依赖子组件的顺序，也不是响应式的）（节制使用）
+                    >props 方式：父组件通过 Prop 向子组件传递数据（推荐使用）
                 </router-link>
             </li>
             <li>
                 <router-link to="/parent_to_child/slot"
-                    >父组件通过 v-slot 设置值，子组件通过带 name 的 slot
-                    接收值（推荐使用）
+                    >slot 方式：父组件通过 v-slot 设置值，子组件通过带 name 的
+                    slot 接收值（推荐使用）
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/parent_to_child/refs"
+                    >refs 方式：父组件通过 ref 设置子组件的值（可以使用）
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/parent_to_child/$children"
+                    >$children 方式：父组件通过 $children
+                    设置子组件的值（$children
+                    并不保证顺序，开发者不应该依赖子组件的顺序，也不是响应式的）（节制使用）
                 </router-link>
             </li>
         </ol>
@@ -34,22 +35,27 @@
         <ol>
             <li>
                 <router-link to="/child_to_parent/v-on_emit"
-                    >父组件通过 v-on
+                    >父组件监听子组件事件 方式：父组件通过 v-on
                     监听子组件的事件，然后父组件使用子组件触发事件抛出的值（本例中，值是一个1到100之内的随机数）</router-link
                 >
             </li>
             <li>
                 <router-link to="/child_to_parent/child_component_change_prop"
-                    >子组件修改接收的基本类型 prop，会报错（如果一定要改，以
-                    update:myPropName
+                    >（不是方式，一个例子）子组件修改接收的基本类型
+                    prop，会报错（如果一定要改，以 update:myPropName
                     的模式触发事件实现，即下面第3种方法）</router-link
                 >
             </li>
             <li>
                 <router-link to="/child_to_parent/sync_emit_update"
-                    >子组件修改父组件传来的 prop，然后 emit 一个 update
-                    事件，父组件监听该事件并更新自己的
+                    >.sync 修饰符 方式：子组件修改父组件传来的 prop，然后 emit
+                    一个 update 事件，父组件监听该事件并更新自己的
                     prop（是自定义事件的语法糖）</router-link
+                >
+            </li>
+            <li>
+                <router-link to="/child_to_parent/$parent"
+                    >子组件通过 $parent 设置父组件的值（节制使用）</router-link
                 >
             </li>
         </ol>

@@ -59,11 +59,6 @@ export default {
     data() {
         return {};
     },
-    // watch: {
-    //     prop_array_required () {
-    //
-    //     }
-    // },
     methods: {
         childChangeArrayTypeProp() {
             this.prop_array_required.shift();

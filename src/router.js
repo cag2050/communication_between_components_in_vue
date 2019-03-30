@@ -23,7 +23,7 @@ export default new Router({
                 import(/* webpackChunkName: "about" */ "./views/About.vue")
         },
         {
-            path: "/parent_to_child/v-on_emit",
+            path: "/parent_to_child/props",
             component: () => import("./views/parent_to_child/props/Parent.vue")
         },
         {
@@ -53,6 +53,11 @@ export default new Router({
             path: "/child_to_parent/sync_emit_update",
             component: () =>
                 import("./views/child_to_parent/sync_emit_update/Parent.vue")
+        },
+        {
+            path: "/child_to_parent/$parent",
+            component: () =>
+                import("./views/child_to_parent/$parent/Parent.vue")
         }
     ]
 });
