@@ -8,10 +8,17 @@
         <h3>父组件传给子组件：</h3>
         <ol>
             <li>
-                <router-link to="/parent_to_child/props">props</router-link>
+                <router-link to="/parent_to_child/props"
+                    >父组件通过 Prop 向子组件传递数据（推荐使用）
+                </router-link>
             </li>
-            <li></li>
+            <li>
+                <router-link to="/parent_to_child/refs"
+                    >父组件通过 ref 设置子组件的值
+                </router-link>
+            </li>
         </ol>
+        <div>===以下是路由的页面内容===</div>
         <router-view />
     </div>
 </template>

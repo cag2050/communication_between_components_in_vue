@@ -25,6 +25,10 @@ export default new Router({
         {
             path: "/parent_to_child/props",
             component: () => import("./views/parent_to_child/props/Parent.vue")
+        },
+        {
+            path: "/parent_to_child/refs",
+            component: () => import("./views/parent_to_child/refs/Parent.vue")
         }
     ]
 });

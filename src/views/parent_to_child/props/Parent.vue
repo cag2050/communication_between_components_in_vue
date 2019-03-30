@@ -1,6 +1,6 @@
 <template>
     <div>
-        <child :prop_str="str1"></child>
+        <child :prop_string_required="string1"></child>
     </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
     },
     data() {
         return {
-            str1: "str from parent"
+            string1: "string from parent"
         };
     }
 };

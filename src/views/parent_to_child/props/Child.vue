@@ -2,12 +2,8 @@
     <div>
         <table border="1" cellspacing="0" cellpadding="5">
             <tr>
-                <td>从父组件传来的值（字符串类型）：</td>
-                <td>{{ this.prop_str }}</td>
-            </tr>
-            <tr>
-                <td>从父组件传来的值（字符串类型）：</td>
-                <td>{{ this.prop_str }}</td>
+                <td>父组件通过 prop 传递给子组件的值（字符串类型）：</td>
+                <td>{{ this.prop_string_required }}</td>
             </tr>
         </table>
     </div>
@@ -17,10 +13,13 @@
 export default {
     name: "Child",
     props: {
-        prop_str: {
+        prop_string_required: {
             type: String,
             required: true
         }
+    },
+    data() {
+        return {};
     }
 };
 </script>
