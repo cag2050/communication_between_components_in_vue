@@ -1,11 +1,12 @@
 <template>
     <div>
-        <child ref="child"></child>
+        <child></child>
         <button @click="setChildDataName">
-            点击：父组件通过 ref 设置子组件中 data 里的属性
+            点击：父组件通过 $children 设置子组件中 data 里的属性
         </button>
         <button @click="callChildMethodSetAge">
-            点击：父组件通过 ref 调用子组件的方法，设置子组件中 data 里的属性
+            点击：父组件通过 $children 调用子组件的方法，设置子组件中 data
+            里的属性
         </button>
     </div>
 </template>
@@ -21,12 +22,13 @@ export default {
     data() {
         return {};
     },
+    mounted() {},
     methods: {
         setChildDataName() {
-            this.$refs.child.name = "jeff";
+            this.$children[0].name = "jeff";
         },
         callChildMethodSetAge() {
-            this.$refs.child.setAge();
+            this.$children[0].setAge();
         }
     }
 };

@@ -23,12 +23,31 @@ export default new Router({
                 import(/* webpackChunkName: "about" */ "./views/About.vue")
         },
         {
-            path: "/parent_to_child/props",
+            path: "/parent_to_child/v-on_emit",
             component: () => import("./views/parent_to_child/props/Parent.vue")
+        },
+        {
+            path: "/parent_to_child/slot",
+            component: () => import("./views/parent_to_child/slot/Parent.vue")
         },
         {
             path: "/parent_to_child/refs",
             component: () => import("./views/parent_to_child/refs/Parent.vue")
+        },
+        {
+            path: "/parent_to_child/$children",
+            component: () =>
+                import("./views/parent_to_child/$children/Parent.vue")
+        },
+        {
+            path: "/child_to_parent/v-on_emit",
+            component: () =>
+                import("./views/child_to_parent/v-on_emit/Parent.vue")
+        },
+        {
+            path: "/child_to_parent/sync_emit_update",
+            component: () =>
+                import("./views/child_to_parent/sync_emit_update/Parent.vue")
         }
     ]
 });
