@@ -24,7 +24,7 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/parent_to_child/$children"
+                <router-link to="/parent_to_child/children"
                     >$children 方式：父组件通过 $children
                     设置子组件的值（$children
                     并不保证顺序，开发者不应该依赖子组件的顺序，也不是响应式的）（节制使用）
@@ -55,7 +55,7 @@
                 >
             </li>
             <li>
-                <router-link to="/child_to_parent/$parent"
+                <router-link to="/child_to_parent/parent"
                     >$parent 方式：子组件通过 $parent
                     设置父组件的值（节制使用）</router-link
                 >

@@ -35,7 +35,7 @@ export default new Router({
             component: () => import("./views/parent_to_child/refs/Parent.vue")
         },
         {
-            path: "/parent_to_child/$children",
+            path: "/parent_to_child/children",
             component: () =>
                 import("./views/parent_to_child/$children/Parent.vue")
         },
@@ -55,7 +55,7 @@ export default new Router({
                 import("./views/child_to_parent/sync_emit_update/Parent.vue")
         },
         {
-            path: "/child_to_parent/$parent",
+            path: "/child_to_parent/parent",
             component: () =>
                 import("./views/child_to_parent/$parent/Parent.vue")
         }
